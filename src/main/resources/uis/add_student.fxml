@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import uts.praktikum.pemrograman2.customui.NumberTextField?>
+<AnchorPane id="AnchorPane" prefHeight="414.0" prefWidth="394.0" stylesheets="@main.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="uts.praktikum.pemrograman2.controllers.AddStudentController">
+  <children>
+    <VBox prefHeight="577.0" prefWidth="727.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Pane/>
+        <Pane/>
+        <Pane prefWidth="800.0" styleClass="header-primary">
+          <children>
+            <Label fx:id="lblAppTitle" prefHeight="24.0" prefWidth="500.0" styleClass="header-text-primary"
+                   text="Add Student">
+              <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+              </padding>
+            </Label>
+          </children>
+        </Pane>
+        <GridPane>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          </rowConstraints>
+          <children>
+            <Label text="NIM"/>
+            <Label text="Nama" GridPane.rowIndex="1"/>
+            <Button mnemonicParsing="false" onAction="#saveNewStudent" styleClass="btn-info" text="Save"
+                    GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <NumberTextField fx:id="tfNim" promptText="1310520075" GridPane.columnIndex="1"/>
+            <TextField fx:id="tfNama" promptText="Hairul Imam" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+          </children>
+          <VBox.margin>
+            <Insets top="20.0"/>
+          </VBox.margin>
+          <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+          </padding>
+        </GridPane>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
